@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Home from "./Components/Home.js";
+import { Routes, Route } from "react-router-dom";
+import Signup from "./Components/Signup.js";
+import Login from "./Components/Login.js";
+import Expand from "./Components/Expand.js";
+import NoPath from "./Components/NoPath.js";
+import { useAuth } from "./Components/Firebase.js";
 
 function App() {
+  //For checking Current User
+  const currentUser = useAuth();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        {/* Works only when user is logged in */}
+        {currentUser && <Route path="/home" element={<Home />} />}
+        {currentUser && <Route path="/expand" element={<Expand />} />}
+        <Route path="*" element={<NoPath />} />
+      </Routes>
     </div>
   );
 }
-
 export default App;

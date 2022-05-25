@@ -1,0 +1,292 @@
+.main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #242526;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 3;
+}
+
+.leftDiv {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftInner {
+  display: flex;
+  width: 56%;
+  height: 30%;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  height: 70%;
+}
+
+.image {
+  display: flex;
+  width: 30%;
+  height: 100%;
+  align-items: center;
+}
+
+.titleInner {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  padding-top: 10px;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+}
+
+.snapshots {
+  margin-top: -15px;
+  font-size: 450%;
+  color: #F5B301;
+}
+
+.caption {
+  display: flex;
+  width: 100%;
+  padding-left: 20px;
+  height: 30%;
+  color: #fff;
+}
+
+.rightDiv {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  align-items: center;
+}
+
+.rightInner {
+  display: flex;
+  width: 55%;
+  height: 60%;
+  border-radius: 20px;
+  background-color: #fff; 
+  flex-direction: column;
+}
+
+.logo {
+  display: flex;
+  width: 100%;
+  height: 25%;
+  border-radius:20px 20px 0 0 ;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 40px;
+  font-size: 30px;
+}
+
+.snaplogo {
+  border-radius: 100%;
+}
+
+.credentials {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  border-radius:0 0 20px 20px;
+}
+
+.in1 {
+  all: unset;
+  letter-spacing: 3;
+  border-radius: 20px;
+  background-color: #F2F2F2;
+  color: #929292;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  border: none;
+  width: 70%;
+  padding: 15px;
+}
+
+.submit {
+  all: unset;
+  padding: 13px 50px;
+  border-radius: 100px;
+  background-color: #F5B301;
+  cursor: pointer;
+}
+
+.login {
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.register {
+  color: #F5B301;
+  font-size: larger;
+  text-decoration: inherit;
+}
+
+@media screen and (max-width:1440px){
+  .image {
+    width: 25%;
+  }
+  .icon {
+    width: 100px;
+    height: 100px;
+  } 
+  .snapshots {
+    font-size: 300%;
+  }
+  .caption {
+    font-size:13px;
+  }
+  .welcome {
+    font-size: 15px;
+  }
+  .rightInner {
+    height: 70%;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width:1024px)  {
+  .title {
+    height: 60%;
+  }
+  .icon {
+    width: 90px;
+    height: 90px;
+  }
+  .titleInner {
+    padding-left: 20px;
+    padding-top: 0px;
+  } 
+  .snapshots {
+    font-size: 250%;
+  }
+  .caption {
+    font-size:10px;
+  }
+  .welcome {
+    padding-top:19px;
+    font-size: 13px;
+  }
+  .rightInner {
+    width:80%;
+    height:70%
+  }
+}
+
+@media screen and (max-width:768px)  {
+  .main {
+    flex-direction: column;
+  }
+  .leftDiv {
+    width:100%;
+    height:20%;
+    align-items: end;
+  }
+  .leftInner {
+    width:40%;
+    height:60%;
+  }
+  .title {
+    width:100%;
+    height:100%;
+  }
+  .image {
+    width:30%;
+    height:100%;
+  }
+  .caption {
+    width:95%;
+    height:0%;
+    visibility:hidden;
+  }
+  .welcome {
+    margin-top: -15px;
+    padding:0px; 
+  }
+  .rightDiv {
+    width:100%;
+    height:80%;
+    justify-content: center;
+    align-items: center;
+  }
+  .rightInner {
+    width:55%;
+    height:75%;
+  }
+  .logo {
+    height: 25%;
+  }
+  .snaplogo {
+    margin-bottom: -20px;
+  }
+  .credentials {
+    height: 75%;
+  }
+  .in1 {
+    width:70%;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width:425px) {
+  .leftDiv {
+    height:30%;
+    align-items: center;
+  }
+  .leftInner {
+    width: 70%;
+  }
+  .welcome {
+    padding-top:28px;
+    font-size: 12px;
+  }
+  .snapshots {
+    font-size: 230%
+  }
+  .icon {
+    width: 70px;
+    height: 70px;
+  }
+  .rightDiv {
+    height:70%;
+    align-items: start;
+  }
+  .rightInner {
+    width:80%;
+    height: 90%;
+  }
+  .logo {
+    height:30%;
+  }
+  .snaplogo {
+    width:70px;
+    height:70px;
+  }
+  .in1 {
+    padding: 10px;
+    width: 75%;
+  }
+}
+
+@media screen and (max-width:320px) and (min-width:0px) {
+  .leftInner {
+    width: 87%;
+  }
+  .rightInner {
+    width: 90%;
+  }
+}
